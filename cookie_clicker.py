@@ -6,7 +6,7 @@ wn.bgcolor("black")
 
 wn.register_shape("sfu.gif")
 
-cookie = turtle.Turtle()
+cookie = turtle.Turtle() #lol
 cookie.shape("sfu.gif")
 cookie.speed(0)
 
