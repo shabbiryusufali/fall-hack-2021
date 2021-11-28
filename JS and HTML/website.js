@@ -1,7 +1,7 @@
 document.getElementById("cookie").onclick = cookieClicked;
 
 var money = 1000;
-
+var clicks_per_sec = 0;
 var upgrades = new Array();
 var money_per_click = 1;
 
@@ -36,7 +36,7 @@ function upgrade_click(upgrade)
     {
         money -= upgrades[upgrade].cost;
         cookieClicked();
-        money_per_click = money_per_click*2;
+        money_per_click = money_per_click*1.6;
     }
     
 }
