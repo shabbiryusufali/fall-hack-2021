@@ -1,6 +1,6 @@
 document.getElementById("cookie").onclick = cookieClicked;
 
-var money = 1000;
+var money = 1000000;
 var clicks_per_sec = 0;
 var upgrades = new Array();
 var money_per_click = 1;
@@ -34,19 +34,19 @@ function upgrade_click(upgrade)
 {
     if(upgrades[upgrade].cost <= money)
     {
-        money -= upgrades[upgrade].cost;
-        cookieClicked();
-        money_per_click = money_per_click*1.6;
+        money =  money - upgrades[upgrade].cost;
+        upgrades[upgrade].cost = Math.round(upgrades[upgrade].cost*1.15);
+        money = Math.round(money);
+        document.getElementById("money").innerHTML = "$" + money;
+        money_per_click = money_per_click*1.3;
     }
-    
 }
 
 function buyUpgrade(upgrade) {
     console.log("clicked");
     if (upgrades[upgrade].cost <= money) {
         money -= upgrades[upgrade].cost;
-        cookieClicked();
-        setInterval(() => { cookieClicked(); }, 1/upgrades[upgrade].CPS * 1000);
+        setInterval(() => { money++; money = Math.round(money); document.getElementById("money").innerHTML = "$" + money;}, 1/upgrades[upgrade].CPS * 1000);
         upgrades[upgrade].cost = Math.round(upgrades[upgrade].cost*1.15);
 
         console.log(upgrades[upgrade].cost);
