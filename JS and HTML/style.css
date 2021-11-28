@@ -1,0 +1,94 @@
+.vl {
+    border-left: 3px solid black;
+    height: 800px;
+    position: absolute;
+    left: 30%;
+    margin-left: -3px;
+    top: 0;
+  }
+
+body {
+    background: lightyellow;
+    font: 18px Arial, sans-serif;
+}
+
+
+div.sfu {
+    position: relative;
+    top: 15px;
+    left: 75px;
+    color:orange;
+}
+
+h2 {
+    color: orange;
+    text-indent:750px;
+}
+
+.button {
+    width: 500px;
+    height: 500px;
+  }
+
+div.a {
+    text-indent: 225px;
+  }
+  
+div.upgrades {
+    color: orange;
+    position: absolute;
+    top: 0px;
+    left: 800px;
+  }
+  
+  div.c {
+    text-indent: 30%;
+  }
+
+div.tuitionStyle {
+    position: absolute;
+    top: 100px;
+    left: 660px;
+}
+
+div.essayStyle {
+    position: absolute;
+    top: 200px;
+    left: 660px;
+}
+
+div.assemblyStyle {
+    position: absolute;
+    top: 300px;
+    left: 660px;
+}
+
+div.textbookStyle {
+    position: absolute;
+    top: 400px;
+    left: 660px;
+}
+
+div.studentStyle {
+    position: absolute;
+    top: 500px;
+    left: 660px;
+}
+
+div.instructorStyle {
+    position: absolute;
+    top: 600px;
+    left: 660px;
+}
+
+div.tuitionCounter {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+}
+
+div.essayCounter {
+    position: absolute;
+    top: 200px;
+    left: 500px;
+}
