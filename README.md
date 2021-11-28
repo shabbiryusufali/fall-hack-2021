@@ -5,3 +5,5 @@ A GitHub repository containing the code for our team's Fall 2021 Hackathon Proje
 - Emily Zhang | eza11
 - Dylan Da Feng | ddf3
 - Danny Yu | dya46
+
+Wikipedia -> Simon Fraser University -> USD -> CAD
