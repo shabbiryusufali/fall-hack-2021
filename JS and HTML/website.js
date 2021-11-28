@@ -35,7 +35,7 @@ function upgrade_click(upgrade)
     if(upgrades[upgrade].cost <= money)
     {
         money =  money - upgrades[upgrade].cost;
-        upgrades[upgrade].cost = Math.round(upgrades[upgrade].cost*1.15);
+        upgrades[upgrade].cost = Math.round(upgrades[upgrade].cost*1.6);
         money = Math.round(money);
         document.getElementById("money").innerHTML = "$" + money;
         money_per_click = money_per_click*1.3;
@@ -55,13 +55,27 @@ function buyUpgrade(upgrade) {
     }
 }
 
-document.getElementById("tuition").onclick = () => { upgrade_click(0); }
-document.getElementById("upgrd_CMPT105W").onclick = () => { buyUpgrade(1); }
-document.getElementById("upgrd_CMPT295").onclick = () => { buyUpgrade(2); }
-document.getElementById("upgrd_CMPTCourses").onclick = () => { buyUpgrade(3); }
-document.getElementById("upgrd_Student").onclick = () => { buyUpgrade(4); }
-document.getElementById("upgrd_Instructor").onclick = () => { buyUpgrade(5); }
-document.getElementById("upgrd_LowerCurve").onclick = () => { buyUpgrade(6); }
-document.getElementById("upgrd_NewCampus").onclick = () => { buyUpgrade(7); }
-document.getElementById("upgrd_DestroyUni").onclick = () => { buyUpgrade(8); }
-document.getElementById("upgrd_onlySFU").onclick = () => { buyUpgrade(9); }
+function showcost()
+{
+    document.getElementById("0").innerHTML = upgrades[0].cost;
+    document.getElementById("1").innerHTML = upgrades[1].cost;
+    document.getElementById("2").innerHTML = upgrades[2].cost;
+    document.getElementById("3").innerHTML = upgrades[3].cost;
+    document.getElementById("4").innerHTML = upgrades[4].cost;
+    document.getElementById("5").innerHTML = upgrades[5].cost;
+    document.getElementById("6").innerHTML = upgrades[6].cost;
+    document.getElementById("7").innerHTML = upgrades[7].cost;
+    document.getElementById("8").innerHTML = upgrades[8].cost;
+    document.getElementById("9").innerHTML = upgrades[9].cost;
+}
+
+document.getElementById("tuition").onclick = () => { upgrade_click(0); document.getElementById("0").innerHTML = upgrades[0].cost}
+document.getElementById("upgrd_CMPT105W").onclick = () => { buyUpgrade(1); document.getElementById("1").innerHTML = upgrades[1].cost}
+document.getElementById("upgrd_CMPT295").onclick = () => { buyUpgrade(2); document.getElementById("2").innerHTML = upgrades[2].cost}
+document.getElementById("upgrd_CMPTCourses").onclick = () => { buyUpgrade(3); document.getElementById("3").innerHTML = upgrades[3].cost}
+document.getElementById("upgrd_Student").onclick = () => { buyUpgrade(4); document.getElementById("4").innerHTML = upgrades[4].cost}
+document.getElementById("upgrd_Instructor").onclick = () => { buyUpgrade(5); document.getElementById("5").innerHTML = upgrades[5].cost}
+document.getElementById("upgrd_LowerCurve").onclick = () => { buyUpgrade(6); document.getElementById("6").innerHTML = upgrades[6].cost}
+document.getElementById("upgrd_NewCampus").onclick = () => { buyUpgrade(7); document.getElementById("7").innerHTML = upgrades[7].cost}
+document.getElementById("upgrd_DestroyUni").onclick = () => { buyUpgrade(8); document.getElementById("8").innerHTML = upgrades[8].cost}
+document.getElementById("upgrd_onlySFU").onclick = () => { buyUpgrade(9); document.getElementById("9").innerHTML = upgrades[9].cost}
