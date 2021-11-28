@@ -26,7 +26,7 @@ upgrades.push(new Upgrade("upgrd_DestroyUni", 69420, 150));
 upgrades.push(new Upgrade("upgrd_onlySFU", 69420666, 100000000000000000000000000000000000));
 
 function cookieClicked() {
-    money = money + money_per_click;
+    money = Math.round(money + money_per_click);
     document.getElementById("money").innerHTML = "$" + money;
 }
 
