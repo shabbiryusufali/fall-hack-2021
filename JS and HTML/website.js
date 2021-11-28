@@ -12,8 +12,8 @@ class Upgrade {
     }
 }
 
-upgrades += [new Upgrade("upgrd_admitStudent", 10, 0.1)];
-upgrades += [new Upgrade("upgrd_hireInstructor", 1000, 10)];
+upgrades.push(new Upgrade("upgrd_admitStudent", 10, 0.1));
+upgrades.push(new Upgrade("upgrd_hireInstructor", 1000, 10));
 
 // var upgradeCosts = new Object();
 // upgradeCosts["upgrd_admitStudent"] = 10;
@@ -28,13 +28,16 @@ function cookieClicked() {
 }
 
 function buyUpgrade(upgrade) {
+    console.log("clicked");
     if (upgrades[upgrade].cost <= money) {
         money -= upgrades[upgrade].cost;
         cookieClicked();
-        setTimeout(setInterval(() => { cookieClicked(); }, 1/upgrades[upgrade].CPS * 1000), 1/upgrades[upgrade].CPS * 1000);
-        upgrades[upgrade].cost = Math.round(upgradeCosts[upgrade]*1.15);
+        setInterval(() => { cookieClicked(); }, 1/upgrades[upgrade].CPS * 1000);
+        upgrades[upgrade].cost = Math.round(upgrades[upgrade].cost*1.15);
 
         console.log(upgrades[upgrade].cost);
+    } else {
+        console.log("no money");
     }
 }
 
