@@ -1,6 +1,6 @@
 document.getElementById("cookie").onclick = cookieClicked;
 
-var money = 00000000000;
+var money = 69420666;
 var clicks_per_sec = 0;
 var upgrades = new Array();
 var money_per_click = 1;
@@ -56,6 +56,20 @@ function buyUpgrade(upgrade) {
         console.log("no money");
     }
 }
+
+function showcost() {
+    document.getElementById("0").innerHTML = "$" + upgrades[0].cost;
+    document.getElementById("1").innerHTML = "$" + upgrades[1].cost;
+    document.getElementById("2").innerHTML = "$" + upgrades[2].cost;
+    document.getElementById("3").innerHTML = "$" + upgrades[3].cost;
+    document.getElementById("4").innerHTML = "$" + upgrades[4].cost;
+    document.getElementById("5").innerHTML = "$" + upgrades[5].cost;
+    document.getElementById("6").innerHTML = "$" + upgrades[6].cost;
+    document.getElementById("7").innerHTML = "$" + upgrades[7].cost;
+    document.getElementById("8").innerHTML = "$" + upgrades[8].cost;
+    document.getElementById("9").innerHTML = "$" + upgrades[9].cost;
+}
+
 
 document.getElementById("tuition").onclick = () => {
     upgrade_click(0);
